@@ -28,5 +28,15 @@ http://127.0.0.1:8000/user - list of all Users <br />
 http://127.0.0.1:8000/place - list of all Places <br />
 
 Request format for create/update USER model:  <br />
+{
+        "first_name": "Bruce",
+        "last_name": "Banner",
+        "mobile": "0048123456789 ",
+        "mail": "green@av.com",
+        "position": "science manager",
+        "hire_date": "2023-05-14",
+        "leave_date": null,
+}
+
 Request format for create/update PLACE model:  <br />
     
