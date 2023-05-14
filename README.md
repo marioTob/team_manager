@@ -6,5 +6,5 @@
 3. **Install:** <br />
     `django` <br />
     `rest_framework` <br />
-4. **Run harmony server** <br />
+4. **Run server** <br />
     `python manage.py runserver` <br />
