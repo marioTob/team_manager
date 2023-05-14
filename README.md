@@ -29,15 +29,15 @@ http://127.0.0.1:8000/user/add - add new User <br />
 http://127.0.0.1:8000/place - list of all Places <br />
 
 Request format for create/update USER model:  <br />
-`{ <br />
-        "first_name": "Bruce", <br />
-        "last_name": "Banner", <br />
-        "mobile": "0048123456789", <br />
-        "mail": "green@av.com", <br />
-        "position": "scientist", <br />
-        "hire_date": "2010-05-14", <br />
-        "leave_date": null, <br /> 
-        "updated": "2023-05-14T19:21:07.130056Z" <br />
+`{
+        "first_name": "Bruce",
+        "last_name": "Banner",
+        "mobile": "0048123456789",
+        "mail": "green@av.com",
+        "position": "scientist",
+        "hire_date": "2010-05-14",
+        "leave_date": null,
+        "updated": "2023-05-14T19:21:07.130056Z"
 }` <br />
 
 Request format for create/update PLACE model:  <br />
