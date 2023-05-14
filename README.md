@@ -34,7 +34,14 @@ request format: `{
         "position": "scientist",
         "hire_date": "2010-05-14",
         "leave_date": null,
+        "updated": ""
 }` <br />
 
 http://127.0.0.1:8000/place - list of all Places <br />
+http://127.0.0.1:8000/place/add - add new Place <br />
+request format: `{
+        "name": "Milling 1",
+        "description": "5-axis milling",
+        "updated": ""
+}` <br />
     
