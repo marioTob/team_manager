@@ -24,7 +24,7 @@ App is displaying list of all USERS (employees) and PLACES (workstations where w
     
 ## Test:
 URLS: <br />
-http://127.0.0.1:8000/team - list of all Users <br />
+http://127.0.0.1:8000/user - list of all Users <br />
 http://127.0.0.1:8000/place - list of all Places <br />
 
 Request format for create/update USER model:  <br />
