@@ -13,7 +13,13 @@ App is displaying list of all USERS (employees) and PLACES (workstations where w
     `pip install djangorestframework` <br />
     
 ## App setup:
-1. **Run server** <br />
+1. **Prepare migrations** <br />
+    `python manage.py makemigrations` <br />
+2. **Migrate** <br />
+    `python manage.py migrate` <br />
+3. **Create superuser** <br />
+    `python manage.py createsuperuser` <br />
+4. **Run server** <br />
     `python manage.py runserver` <br />
     
 ## Test:
