@@ -27,7 +27,7 @@ URLS: <br />
 http://127.0.0.1:8000/user - list of all Users <br />
 http://127.0.0.1:8000/user/1 - single User <br />
 http://127.0.0.1:8000/user/add - add new User <br />
-request format: `{
+> request format: `{
         "first_name": "Bruce",
         "last_name": "Banner",
         "mobile": "0048123456789",
@@ -41,7 +41,7 @@ request format: `{
 http://127.0.0.1:8000/place - list of all Places <br />
 http://127.0.0.1:8000/place/1 - single Place <br />
 http://127.0.0.1:8000/place/add - add new Place <br />
-request format: `{
+> request format: `{
         "name": "Milling 1",
         "description": "5-axis milling",
         "updated": ""
