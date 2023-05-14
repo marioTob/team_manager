@@ -34,7 +34,6 @@ request format: `{
         "position": "scientist",
         "hire_date": "2010-05-14",
         "leave_date": null,
-        "updated": "2023-05-14T19:21:07.130056Z"
 }` <br />
 
 http://127.0.0.1:8000/place - list of all Places <br />
