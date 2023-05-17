@@ -37,7 +37,8 @@ request format: `{
         "leave_date": null,
         "updated": ""
 }` <br />
-http://127.0.0.1:8000/user/1/delete/ - add new User <br />
+http://127.0.0.1:8000/user/1/update/ - update new User <br />
+http://127.0.0.1:8000/user/1/delete/ - delete User <br />
 
 http://127.0.0.1:8000/place - list of all Places <br />
 http://127.0.0.1:8000/place/1 - single Place <br />
@@ -47,5 +48,6 @@ request format: `{
         "description": "5-axis milling",
         "updated": ""
 }` <br />
-http://127.0.0.1:8000/place/1/delete - add new User <br />
+http://127.0.0.1:8000/place/1/update/ - update Place <br />
+http://127.0.0.1:8000/place/1/delete - delete Place <br />
     
