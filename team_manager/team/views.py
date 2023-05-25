@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-from .serializers import UserSerializer, PlaceSerializer
+from .serializers import UserSerializer, UserDetailedSerializer, PlaceSerializer
 from .models import User, Place
 
 
@@ -19,7 +19,7 @@ def safe_get(model_class, default=None, **kargs):
 @api_view(['GET'])
 def users(request):
     users = User.objects.all()
-    serializer = UserSerializer(users, many=True)
+    serializer = UserDetailedSerializer(users, many=True)
     return Response(serializer.data)
 
 
@@ -28,7 +28,7 @@ def user(request, id):
     user = safe_get(User, id=id)
     if not user:
         return Response({'error': 'no User with this id'}, status.HTTP_400_BAD_REQUEST)
-    serializer = UserSerializer(user, many=False)
+    serializer = UserDetailedSerializer(user, many=False)
     return Response(serializer.data)
 
 
@@ -112,6 +112,3 @@ def deletePlace(request, id):
         return Response({'error': 'no Place with this id'}, status.HTTP_400_BAD_REQUEST)
     place.delete()
     return Response(f'Place {id} deleted')
-
-
-

@@ -1,9 +1,12 @@
 # team_manager
 
 ## Description:
-Team Management App - backend (rest framework) of an app that can be used by production companies to manage its employees on a production floor.
+Team Management App - backend (rest framework) of an app used by production company to manage its employees on a production floor.
 
-App is displaying list of all USERS (employees) and PLACES (workstations where work is performed), both with CRUD options.
+1. App is displaying lists of all USERS (employees) and PLACES (workstations where work is performed), both with CRUD operations.
+2. USERS have many-to-many relationship with PLACES through EXPERIENCE model (model with CRUD operations).
+3. EXPERIENCE model has additional field 'level' (which describes the experence of an emplyee in a given workstation - for example in the range of 0-5)
+-------4. You can display USER with information about his experiance by requesting single USER.
 
 ## Setting environment:
 1. **Clone Repository from GitHub** <br />
