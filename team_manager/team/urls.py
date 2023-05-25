@@ -14,4 +14,7 @@ urlpatterns = [
     path('place/<str:id>/', views.place, name='place'),
     path('place/<str:id>/delete/', views.deletePlace, name='delete-place'),
     path('place/<str:id>/update/', views.updatePlace, name='update-place'),
+
+    path('experience/add/', views.addExperience, name='add-experience'),
+    path('experience/update/', views.updateExperience, name='update-experience'),
 ]

@@ -22,8 +22,7 @@ class PlaceUserSerializer(serializers.ModelSerializer):
         fields = ['id', 'name', 'description', 'updated', 'level']
 
     def get_level(self, place_instance):
-        #data = Experience.objects.filter(place=place_instance).last()
-        data = Experience.objects.filter(place=place_instance).get()
+        data = Experience.objects.filter(place=place_instance).last()
         return data.level
 
 

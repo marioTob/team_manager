@@ -4,8 +4,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 
-from .serializers import UserSerializer, UserDetailedSerializer, PlaceSerializer
-from .models import User, Place
+from .serializers import UserSerializer, UserDetailedSerializer, PlaceSerializer, ExperienceSerializer
+from .models import User, Place, Experience
 
 
 def safe_get(model_class, default=None, **kargs):
@@ -112,3 +112,28 @@ def deletePlace(request, id):
         return Response({'error': 'no Place with this id'}, status.HTTP_400_BAD_REQUEST)
     place.delete()
     return Response(f'Place {id} deleted')
+
+
+@api_view(['POST'])
+def addExperience(request):
+    data = request.data
+    serializer = ExperienceSerializer(data=data)
+    if not serializer.is_valid():
+        error = {'error': serializer.errors}
+        return Response(error, status.HTTP_400_BAD_REQUEST)
+    serializer.save()
+    return Response(serializer.data)
+
+
+@api_view(['PUT'])
+def updateExperience(request):
+    data = request.data
+    experience = safe_get(
+        Experience, None, user=data['user'], place=data['place'])
+    if not experience:
+        error = {'errors': 'no Experience with this parameters'}
+        return Response(error, status.HTTP_400_BAD_REQUEST)
+    serializer = ExperienceSerializer(experience, data=data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
