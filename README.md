@@ -32,6 +32,7 @@ Team Management App - backend (rest_framework) of an app used by production comp
 3. Connect USERS with PLACES
 
 URLS - examples: <br />
+<br />
 http://127.0.0.1:8000/user - list of all Users <br />
 http://127.0.0.1:8000/user/1 - single User <br />
 http://127.0.0.1:8000/user/add - add new User <br />
@@ -56,8 +57,7 @@ request format: `{
         "description": "5-axis milling"
 }` <br />
 http://127.0.0.1:8000/place/1/update/ - update Place <br />
-http://127.0.0.1:8000/place/1/delete - delete Place <br />
-<br />    
+http://127.0.0.1:8000/place/1/delete - delete Place <br />  
 <br />
 http://127.0.0.1:8000/experience/add - add new Experience <br />
 http://127.0.0.1:8000/experience/update - update Experience <br />
