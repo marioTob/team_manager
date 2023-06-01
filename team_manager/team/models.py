@@ -34,4 +34,5 @@ class Experience(models.Model):
         unique_together = [['place', 'user']]
 
     def __str__(self):
-        return self.user.first_name + ' ' + self.user.last_name + ' - place: ' + self.place.name
+        u = self.user
+        return f'{u.first_name} {u.last_name} - place: {self.place.name}'

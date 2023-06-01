@@ -3,9 +3,9 @@
 ## Description:
 Team Management App - backend (rest_framework) of an app used by production company to manage its employees on a production floor.
 
-* App is displaying lists of all USERS (employees) and PLACES (workstations where work is performed), both with CRUD operations.
+* App is displaying lists of all USERS (employees) and PLACES (workstations - phisical places, where work is performed by an employee), both with CRUD operations.
 * USERS have many-to-many relationship with PLACES through EXPERIENCE model (model with 'create' and 'update' operations).
-* EXPERIENCE model has additional field 'level' (which describes the experence of an emplyee in a given workstation - for example in the range of 0-5).
+* EXPERIENCE model has additional field 'level' (which describes the level of experence of an emplyee in a given workstation - for example in the range of 0-5).
 * Displaying list of all USERS (or a single USER) gives information about his level of experience in assigned PLACES.
 * Level of experience can be edited.
 
@@ -15,7 +15,7 @@ Team Management App - backend (rest_framework) of an app used by production comp
 3. **Install:** <br />
     `pip install Django` <br />
     `pip install djangorestframework` <br />
-    
+
 ## App setup:
 1. **Prepare migrations** <br />
     `python manage.py makemigrations` <br />
@@ -25,7 +25,7 @@ Team Management App - backend (rest_framework) of an app used by production comp
     `python manage.py createsuperuser` <br />
 4. **Run server** <br />
     `python manage.py runserver` <br />
-    
+
 ## Test:
 1. Create USERS (employees)
 2. Create PLACES (workstations)
